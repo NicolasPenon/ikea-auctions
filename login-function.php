@@ -4,6 +4,8 @@ session_start();
 
 $username = "";
 $mail = "";
+$password = "";
+$confirm_password = "";
 $city = "";
 $birth_date = "";
 $errors = array();

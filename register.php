@@ -11,7 +11,7 @@
       <label>Brugernavn</label>
       <input type="text" name="username" value="<?php echo $username; ?>">
       <label>E-mail</label>
-      <input type="email" name="mail" value="<?php echo $email; ?>">
+      <input type="email" name="mail" value="<?php echo $mail; ?>">
       <label>Kodeord</label>
       <input type="password" name="password" value="<?php echo $password; ?>">
       <label>Bekræft kodeord</label>
