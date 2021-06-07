@@ -30,7 +30,7 @@ if(isset($_POST['registration'])) {
   $user = mysqli_fetch_assoc($results);
 
   if($user) {
-    if($user['usernamer'] === $username) {
+    if($user['username'] === $username) {
       array_push($errors, "Brugernavn er allerede i brug");
     }
     if($user['mail'] === $mail) {
