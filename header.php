@@ -9,6 +9,9 @@
       <input id="submit" type="submit" value="Søg">
     </form>
   </div>
+  <div id="div_opret">
+    <a id="auction_button" href="post-auction.php"><input id="auction_div" type="button" name="auction" value="Opret auktion"></a>
+  </div>
   <div id="div_profile">
     <a id "profile" href="profile.php"><img src="img/profile.png"></a>
   </div>
