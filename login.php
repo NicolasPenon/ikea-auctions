@@ -73,7 +73,17 @@ mysqli_close($conn);
   </head>
   <body>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+      <label>Brugernavn</label>
+      <input type="text" name="username" class="form-control <?php echo (!empty($username_error)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+      <span class="invalid-feedback"><?php echo $username_error; ?></span>
 
+      <label>Password</label>
+      <input type="password" name="password" class="form-control <?php echo (!empty($password_error)) ? 'is-invalid' : ''; ?>">
+      <span class="invalid-feedback"><?php $password_error ?></span>
+
+      <input type="submit" value="login">
+
+      <p>Har du ikke en bruger? <a href="index.php">Tilmeld dig nu</a>.</p>
 
     </form>
   </body>
