@@ -31,6 +31,6 @@ if(isset($_POST['search'])) {
     <title></title>
   </head>
   <body>
-    <?php   print("$output"); ?>
+    <?php print("$output"); ?>
   </body>
 </html>
