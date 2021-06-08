@@ -40,7 +40,7 @@ if(isset($_POST['bid'])) {
     if(isset($_GET['pid'])) {
       while($row=mysqli_fetch_assoc($result)) {
         ?>
-        <div class ="products"> <?php
+        <div class ="product-single"> <?php
         ?> Auktions Nr: <?php echo $row['id'] . ' <br>';
         echo $row['name'] . ' <br>';
         ?> Information:<br><?php echo $row['info'] . ' <br>';
