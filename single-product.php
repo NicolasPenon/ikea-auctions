@@ -23,8 +23,6 @@ if(isset($_POST['bid'])) {
   if($result2 = mysqli_query($conn, $user_id)) {
     $user = mysqli_fetch_assoc($result2);
     $u_id = ($user['id']);
-
-
   }
 
 
