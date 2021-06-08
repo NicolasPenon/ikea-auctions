@@ -4,6 +4,7 @@ include('functions.php');
 $query = "SELECT id, category FROM categories";
 $category = mysqli_query($conn, $query);
 
+
 ?>
 
 <!DOCTYPE html>
