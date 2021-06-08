@@ -35,12 +35,6 @@ if(isset($_POST['auction']))  {
   }
 }
 
-
-if(isset($_POST['auction'])) {
-
-  }
-
-
   $query = "INSERT INTO auctions (name, category, info, min_price, user_id, end_date, status) VALUES ('$prod_name', '$category', '$prod_info', '$min_price', '$u_id', '$end_date', '$default')";
   mysqli_query($conn, $query);
   header('post-auction.php');

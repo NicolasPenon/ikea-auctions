@@ -8,6 +8,30 @@ if(isset($_GET['pid'])){
   $query = "SELECT id, category, name, info, min_price, end_date FROM auctions WHERE id = '$product'";
   $result = mysqli_query($conn, $query);
 }
+
+if(!isset($_SESSION['username'])) {
+  $_SESSION['message'] = "Venligst log ind";
+  header("location: index.php");
+}
+$username = mysqli_real_escape_string($conn, $_SESSION['username']);
+$auc_bid = "";
+
+if(isset($_POST['bid'])) {
+  $auc_bid = mysqli_real_escape_string($conn, $_POST['bidinfo']);
+
+  $user_id = "SELECT id FROM users WHERE username = '$username'";
+  if($result2 = mysqli_query($conn, $user_id)) {
+    $user = mysqli_fetch_assoc($result2);
+    $u_id = ($user['id']);
+
+
+  }
+
+
+$insert = "INSERT INTO bids (amount, auction_id, user_id) VALUES ('$auc_bid', '$prod_id', '$u_id')";
+mysqli_query($conn, $insert);
+
+}
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -26,11 +50,13 @@ if(isset($_GET['pid'])){
         ?> Information:<br><?php echo $row['info'] . ' <br>';
         ?> Pris: <?php echo $row['min_price'] . ' Kr <br>';
         ?> Slut dato:<br><?php echo $row['end_date'] . ' <p>'; ?>
-          <form method="post" action="single-product.php?catid=<?php echo($row['category'])?>&pid=<?php echo($row['id']);?>';">
-            Beløb: <input type="number" name="bidinfo" required>
-            <input type="submit" value="Opret bud">
-          </form>  
-        </div> <?php }
+          <form method="post" action="profile.php">
+            Beløb: <input type="number" step = "0.01" name="bidinfo" required>
+            <input type="submit" value="Opret bud" name="bid">
+          </form>
+        </div> <?php debug($result); }
     }?>
+
+
   </body>
 </html>
