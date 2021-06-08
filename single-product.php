@@ -18,16 +18,14 @@ $auc_bid = "";
 
 if(isset($_POST['bid'])) {
   $auc_bid = mysqli_real_escape_string($conn, $_POST['bidinfo']);
-
   $user_id = "SELECT id FROM users WHERE username = '$username'";
-  if($result2 = mysqli_query($conn, $user_id)) {
-    $user = mysqli_fetch_assoc($result2);
-    $u_id = ($user['id']);
-  }
-
-
-$insert = "INSERT INTO bids (amount, auction_id, user_id) VALUES ('$auc_bid', '$product', '$u_id')";
-mysqli_query($conn, $insert);
+    if($result2 = mysqli_query($conn, $user_id)) {
+      $user = mysqli_fetch_assoc($result2);
+      $u_id = ($user['id']);
+    }
+  $insert = "INSERT INTO bids (amount, auction_id, user_id) VALUES ('$auc_bid', '$product', '$u_id')";
+  mysqli_query($conn, $insert);
+  echo 'Dit bud er nu oprettet på auktionsnummer '.$product;
 
 }
  ?>
@@ -52,7 +50,7 @@ mysqli_query($conn, $insert);
             Beløb: <input type="number" step = "0.01" name="bidinfo" required>
             <input type="submit" value="Opret bud" name="bid">
           </form>
-        </div> <?php debug($result); }
+        </div> <?php }
     }?>
 
 
