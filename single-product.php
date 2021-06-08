@@ -28,7 +28,7 @@ if(isset($_POST['bid'])) {
   }
 
 
-$insert = "INSERT INTO bids (amount, auction_id, user_id) VALUES ('$auc_bid', '$prod_id', '$u_id')";
+$insert = "INSERT INTO bids (amount, auction_id, user_id) VALUES ('$auc_bid', '$product', '$u_id')";
 mysqli_query($conn, $insert);
 
 }
@@ -50,7 +50,7 @@ mysqli_query($conn, $insert);
         ?> Information:<br><?php echo $row['info'] . ' <br>';
         ?> Pris: <?php echo $row['min_price'] . ' Kr <br>';
         ?> Slut dato:<br><?php echo $row['end_date'] . ' <p>'; ?>
-          <form method="post" action="profile.php">
+          <form method="post" action="single-product.php?catid=<?php echo($row['category'])?>&pid=<?php echo($row['id']);?>">
             Beløb: <input type="number" step = "0.01" name="bidinfo" required>
             <input type="submit" value="Opret bud" name="bid">
           </form>
