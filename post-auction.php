@@ -24,12 +24,12 @@ if(isset($_POST['auction']))  {
   $default_status = "SELECT * FROM status WHERE default_value=1";
   $user_id = "SELECT id FROM users WHERE username='$username'";
   if($result = mysqli_query($conn, $default_status)) {
-    echo "Godt arbejde" . mysqli_num_rows($result);
+    echo "Din auktion er nu oprettet";
     $status = mysqli_fetch_assoc($result);
     $default = ($status['id']);
 
   if($result2 = mysqli_query($conn, $user_id)) {
-    echo "wp" . mysqli_num_rows($result2);
+
     $users = mysqli_fetch_assoc($result2);
     $u_id = ($users['id']);
   }
@@ -43,7 +43,6 @@ if(isset($_POST['auction'])) {
 
   $query = "INSERT INTO auctions (name, category, info, min_price, user_id, end_date, status) VALUES ('$prod_name', '$category', '$prod_info', '$min_price', '$u_id', '$end_date', '$default')";
   mysqli_query($conn, $query);
-  $_SESSION['succes'] = "Din auktion er nu oprettet";
   header('post-auction.php');
 }
 ?>
