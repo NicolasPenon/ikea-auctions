@@ -6,6 +6,7 @@ if(!isset($_SESSION['username'])) {
   header("location: index.php");
 }
 $username = $_SESSION['username'];
+include('header.php');
 include('nav.php');
 ?>
 <!DOCTYPE html>

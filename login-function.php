@@ -22,7 +22,7 @@ if(isset($_POST['registration'])) {
   if (empty($mail)) { array_push($errors, "E-mail påkrævet"); }
   if (empty($password)) { array_push($errors, "Kodeord påkrævet"); }
   if ($password != $confirm_password) {
-    array_push($errors, "Kodeord er ikke ens");
+    array_push($errors, "Adgangskoderne er ikke ens");
   }
 
   $username_check = "SELECT * FROM users WHERE username='$username' OR mail='$mail' LIMIT 1";
