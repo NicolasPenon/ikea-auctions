@@ -9,11 +9,13 @@ $username = $_SESSION['username'];
 include('header.php');
 include('nav.php');
 
+$query_all = "SELECT id, name, info, min_price, end_date FROM auctions";
+$result_all = mysqli_query($conn, $query_all);
 
-
-$category = $_GET['catid'];
-$query = "SELECT name, info, min_price, end_date FROM auctions WHERE category = '$category'";
-$result = mysqli_query($conn, $query);
+if(isset($_GET['catid'])){
+  $category = $_GET['catid'];
+  $query = "SELECT id, name, info, min_price, end_date FROM auctions WHERE category = '$category'";
+  $result = mysqli_query($conn, $query); }
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +25,7 @@ $result = mysqli_query($conn, $query);
     <title>Forside</title>
   </head>
   <body>
-    Her er forsiden
+    Her er forsiden <br>
     <?php if(isset($_SESSION['success'])) {
       echo $_SESSION['success'];
       unset($_SESSION['success']);
@@ -32,12 +34,23 @@ $result = mysqli_query($conn, $query);
 
     <?php
     if(isset($_GET['catid'])) {
-    while($row=mysqli_fetch_assoc($result)) {
-      echo $row['name'] . ' ';
-      echo $row['info'] . ' ';
-      echo $row['min_price'] . ' ';
-      echo $row['end_date'] . ' ';
-      }
+      while($row=mysqli_fetch_assoc($result)) { ?>
+        <div class ="auctions"> <?php
+        ?> Auktions Nr: <?php echo $row['id'] . ' <br>';
+        echo $row['name'] . ' <br>';
+        ?> Information:<br><?php echo $row['info'] . ' <br>';
+        ?> Pris: <?php echo $row['min_price'] . ' Kr <br>';
+        ?> Slut dato:<br><?php echo $row['end_date'] . ' <p>';
+      }?></div><?php
+    }else{
+      while($row=mysqli_fetch_assoc($result_all)) { ?>
+        <div class ="auctions"> <?php
+        ?> Auktions Nr: <?php echo $row['id'] . ' <br>';
+        echo $row['name'] . ' <br>';
+        ?> Information:<br><?php echo $row['info'] . ' <br>';
+        ?> Pris: <?php echo $row['min_price'] . ' Kr <br>';
+        ?> Slut dato:<br><?php echo $row['end_date'] . ' <p>';
+      }?></div><?php
     }?>
   </body>
 </html>
