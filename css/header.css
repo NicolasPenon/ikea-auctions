@@ -1,0 +1,62 @@
+header {
+
+  background-color: yellow;
+  margin: 0px;
+  height: auto;
+}
+
+body {
+margin: 0px;
+}
+
+img {
+  display: inline-block;
+  width: 200px;
+  padding-top: 30px;
+}
+
+#div_logo {
+  display: inline-block;
+  height: 95px;
+}
+
+#logo {
+  height:95px;
+}
+
+#div_search {
+  display: inline-block;
+  padding-left: 450px;
+  vertical-align: middle;
+  padding-bottom: 40px;
+}
+
+#search {
+  width: 300px;
+
+}
+
+#div_opret {
+  display: inline-block;
+  padding-bottom: 50px;
+  vertical-align: middle;
+  padding-left: 350px;
+}
+
+#div_profile {
+  display: inline-block;
+  float: right;
+
+}
+
+.profile {
+  height:70px;
+  width: 70px;
+  float: right;
+}
+
+
+#auction_button {
+
+
+}
