@@ -1,0 +1,38 @@
+body {
+  font-size: 20px;
+}
+
+#category {
+  padding-left: 40px;
+}
+
+#allproducts {
+  padding-left: 70px;
+  padding-bottom: 20px;
+}
+
+#categorybox {
+  padding: 30px;
+  border-style: ridge;
+  width: 200px;
+  height: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+a:link {
+  text-decoration: none;
+  coor: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: yellow;
+}
+
+li {
+  list-style-type: none;
+}
