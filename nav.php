@@ -33,6 +33,3 @@ $category = mysqli_query($conn, $query);
       </li>
     </div>
   <?php } ?>
-
-  </body>
-</html>

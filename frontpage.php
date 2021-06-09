@@ -22,13 +22,7 @@ if(isset($_GET['catid'])){
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
     <title>Forside</title>
-  </head>
-  <body>
     Her er forsiden <br>
     <?php if(isset($_SESSION['success'])) {
       echo $_SESSION['success'];

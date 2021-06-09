@@ -14,9 +14,9 @@ body {
 #categorybox {
   padding: 30px;
   border-style: ridge;
+  margin-bottom: 20;
   width: 200px;
   height: 30px;
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -35,4 +35,9 @@ a:hover {
 
 li {
   list-style-type: none;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
 }
