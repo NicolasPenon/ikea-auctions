@@ -1,7 +1,7 @@
 <?php
 
 include('header.php');
-include('functions.php');
+include('nav.php');
 $output='';
 
 if(isset($_POST['search'])) {
@@ -18,19 +18,12 @@ if(isset($_POST['search'])) {
       $category=$row['category'];
       $status=$row['status'];
 
-      $output .= '<div class="id_div"> '.$id.'</div><div class="name_div"> '.$name.'</div><div class="category_div"> '.$category.'</div><div class="status_div"> '.$status.'</div>';
+      $output .= '<div class="search_item"> '.$id.' '.$name.' '.$category.' '.$status.'</div>';
     }
   }
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
     <?php print("$output"); ?>
   </body>
 </html>
