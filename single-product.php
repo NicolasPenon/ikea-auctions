@@ -29,18 +29,8 @@ if(isset($_POST['bid'])) {
 
 }
  ?>
-<<<<<<< Updated upstream
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/product.css">
-    <title></title>
-  </head>
-  <body>
-=======
+
 <main>
->>>>>>> Stashed changes
     <?php
     if(isset($_GET['pid'])) {
       while($row=mysqli_fetch_assoc($result)) {
