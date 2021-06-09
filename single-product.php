@@ -33,6 +33,7 @@ if(isset($_POST['bid'])) {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/product.css">
     <title></title>
   </head>
   <body>
