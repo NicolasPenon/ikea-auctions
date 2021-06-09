@@ -40,35 +40,32 @@ if(isset($_POST['auction']))  {
   header('post-auction.php');
 }
 ?>
- <!DOCTYPE html>
- <html lang="en" dir="ltr">
-   <head>
-     <meta charset="utf-8">
-     <title></title>
-   </head>
-   <body>
+    <main>
+     <div class="auction_form">
+       <form action="post-auction.php" method="post">
 
-     <form action="post-auction.php" method="post">
+         <label for="prod_name">Produktnavn</label><br>
+         <input id="prod_name" type="text" name="name" required><br>
+         <label for="category-select">Kategori</label><br>
 
-       <label for="prod_name">Produktnavn</label>
-       <input id="prod_name" type="text" name="name" required>
-       <label for="category-select">Kategori</label>
-
-       <select id="category-select" name="categories" required>
-         <option value="">Vælg venligst en kategori</option>
-         <option value="1">Stol</option>
-         <option value="2">Bord</option>
-         <option value="3">Lampe</option>
-         <option value="4">Reol</option>
-         <option value="5">Madras</option>
-       </select>
-       <label for="prod_info">Produktinfo</label>
-       <input id="prod_info" type="text" name="info" required>
-       <label for="min_price">Minimums Pris</label>
-       <input id="min_price" type="number" min="1" step="0.01" name="price" required>
-       <label for="date">Slut dato</label>
-       <input id="date" type="datetime-local" name="end_date" required>
-       <input id="auction_div" type="submit" name="auction" value="Opret auktion">
-     </form>
+         <select id="category-select" name="categories" required>
+           <option value="">Vælg venligst en kategori</option>
+           <option value="1">Stol</option>
+           <option value="2">Bord</option>
+           <option value="3">Lampe</option>
+           <option value="4">Reol</option>
+           <option value="5">Madras</option>
+         </select> <br>
+         <label for="prod_info">Produktinfo</label><br>
+         <input id="prod_info" type="text" name="info" required><br>
+         <label for="min_price">Minimums Pris</label><br>
+         <input id="min_price" type="number" min="1" step="0.01" name="price" required><br>
+         <label for="date">Slut dato</label><br>
+         <input id="date" type="datetime-local" name="end_date" required><br>
+         <input id="auction_div" type="submit" name="auction" value="Opret auktion">
+       </form>
+     </div>
+   </main>
+   </div>
    </body>
  </html>

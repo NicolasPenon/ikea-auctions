@@ -24,13 +24,13 @@ if(isset($_GET['catid'])){
 ?>
     <link rel="stylesheet" href="css/frontpage.css">
     <title>Forside</title>
-    Her er forsiden <br>
+    <main>
     <?php if(isset($_SESSION['success'])) {
       echo $_SESSION['success'];
       unset($_SESSION['success']);
       echo $username;
     }  ?>
-
+    <div class="loopitems">
     <?php
     if(isset($_GET['catid'])) {
       while($row2=mysqli_fetch_assoc($result_cat)){
@@ -52,6 +52,8 @@ if(isset($_GET['catid'])){
         ?> Pris: <?php echo $row['min_price'] . ' Kr <br>';
         ?> Slut dato:<br><?php echo $row['end_date'] . ' <p>';
       ?></div><?php }
-    }?>
+    }?> </main>
+  </div>
+</div>
   </body>
 </html>

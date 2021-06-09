@@ -15,7 +15,8 @@ $category = mysqli_query($conn, $query);
     <link rel="stylesheet" href="css/nav.css">
   </head>
   <body>
-  <div class="nav-container">
+    <div class="flexcontainer">
+    <aside>
     <div id="category">
       <h1> Kategorier </h2>
     </div>
@@ -32,4 +33,4 @@ $category = mysqli_query($conn, $query);
           </li>
         </div>
 
-  <?php } ?> </div>
+  <?php } ?> </aside>

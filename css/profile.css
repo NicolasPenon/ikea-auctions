@@ -1,0 +1,18 @@
+.flexcontainer {
+  display: inline-grid;
+}
+.loopitems {
+  width: -webkit-fill-available;
+}
+.bids {
+  display: inline-grid;
+}
+.wins {
+  display: inline-grid;
+}
+.my_auction {
+  display: inline-grid;
+}
+.titles {
+  display: inline-grid;
+}

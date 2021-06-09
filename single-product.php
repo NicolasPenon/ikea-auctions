@@ -29,6 +29,7 @@ if(isset($_POST['bid'])) {
 
 }
  ?>
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -37,6 +38,9 @@ if(isset($_POST['bid'])) {
     <title></title>
   </head>
   <body>
+=======
+<main>
+>>>>>>> Stashed changes
     <?php
     if(isset($_GET['pid'])) {
       while($row=mysqli_fetch_assoc($result)) {
@@ -52,7 +56,7 @@ if(isset($_POST['bid'])) {
             <input type="submit" value="Opret bud" name="bid">
           </form>
         </div> <?php }
-    }?>
+    }?> </main> </div>
 
 
   </body>
