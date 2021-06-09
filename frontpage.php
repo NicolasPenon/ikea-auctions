@@ -22,6 +22,7 @@ if(isset($_GET['catid'])){
 }
 
 ?>
+    <link rel="stylesheet" href="css/frontpage.css">
     <title>Forside</title>
     Her er forsiden <br>
     <?php if(isset($_SESSION['success'])) {

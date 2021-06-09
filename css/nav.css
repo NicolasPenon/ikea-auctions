@@ -2,16 +2,21 @@ body {
   font-size: 20px;
 }
 
+.nav-container {
+  display: grid;
+
+
+}
 #category {
   padding-left: 40px;
 }
 
-#allproducts {
+.allproducts {
   padding-left: 70px;
   padding-bottom: 20px;
 }
 
-#categorybox {
+.categorybox {
   padding: 30px;
   border-style: ridge;
   margin-bottom: 20;
@@ -22,7 +27,7 @@ body {
 
 a:link {
   text-decoration: none;
-  coor: black;
+  color: black;
 }
 
 a:visited {
@@ -35,9 +40,4 @@ a:hover {
 
 li {
   list-style-type: none;
-}
-
-div {
-  display: flex;
-  flex-direction: column;
 }

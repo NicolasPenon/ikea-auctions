@@ -15,21 +15,21 @@ $category = mysqli_query($conn, $query);
     <link rel="stylesheet" href="css/nav.css">
   </head>
   <body>
-
-<div id="category">
-  <h1> Kategorier </h2>
-</div>
-<div id="allproducts">
-    <div onclick="location.href='frontpage.php';" class="products_box">
-      <a class="rtext">Alle produkter</a>
+  <div class="nav-container">
+    <div id="category">
+      <h1> Kategorier </h2>
     </div>
-</div>
-
-<?php
-    while($row=mysqli_fetch_assoc($category)) { ?>
-    <div id ="categorybox">
-      <li>
-        <a href="frontpage.php?catid=<?php echo $row['id']; ?>"><?php echo $row['category']; ?></a>
-      </li>
+    <div class="allproducts">
+        <div onclick="location.href='frontpage.php';" class="products_box">
+          <a class="rtext">Alle produkter</a>
+        </div>
     </div>
-  <?php } ?>
+    <?php
+        while($row=mysqli_fetch_assoc($category)) { ?>
+        <div class ="categorybox">
+          <li>
+            <a href="frontpage.php?catid=<?php echo $row['id']; ?>"><?php echo $row['category']; ?></a>
+          </li>
+        </div>
+
+  <?php } ?> </div>
