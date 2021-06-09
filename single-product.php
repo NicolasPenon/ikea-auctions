@@ -25,7 +25,7 @@ if(isset($_POST['bid'])) {
     }
   $insert = "INSERT INTO bids (amount, auction_id, user_id) VALUES ('$auc_bid', '$product', '$u_id')";
   mysqli_query($conn, $insert);
-  echo 'Dit bud er nu oprettet på auktionsnummer '.$product;
+  echo 'Dit bud er nu oprettet på auktionsnummer '.$product .'<br>';
 
 }
  ?>

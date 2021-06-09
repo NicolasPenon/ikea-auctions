@@ -3,7 +3,7 @@
 include('header.php');
 include('nav.php');
 $output='';
-
+?> <main> <div class="search_container"> <?php
 if(isset($_POST['search'])) {
   $searchq = $_POST['search'];
 
@@ -18,12 +18,14 @@ if(isset($_POST['search'])) {
       $category=$row['category'];
       $status=$row['status'];
 
-      $output .= '<div class="search_item"> '.$id.' '.$name.' '.$category.' '.$status.'</div>';
+      $output .= '<div class="search_item"> Auktionsnummer:'.$id.'<br> Navn: '.$name.'<br> Kategori: '.$category.'<br> Status:'.$status.'</div>';
     }
   }
 }
 ?>
 
     <?php print("$output"); ?>
+  </div>
+</main>
   </body>
 </html>
