@@ -28,7 +28,7 @@ if(isset($_GET['catid'])){
     <?php if(isset($_SESSION['success'])) {
       echo $_SESSION['success'];
       unset($_SESSION['success']);
-      echo $username;
+      echo ' '.$username;
     }  ?>
     <div class="loopitems">
     <?php
@@ -46,7 +46,7 @@ if(isset($_GET['catid'])){
     }else{
       while($row=mysqli_fetch_assoc($result_all)) { ?>
         <div class ="auctions" onclick="location.href='single-product.php?catid=<?php echo($row['category'])?>&pid=<?php echo($row['id']);?>';"> <?php
-        ?> Auktions Nr: <?php echo $row['id'] . ' <br>';
+        ?> Auktion Nr: <?php echo $row['id'] . ' <br>';
         echo $row['name'] . ' <br>';
         ?> Information:<br><?php echo $row['info'] . ' <br>';
         ?> Pris: <?php echo $row['min_price'] . ' Kr <br>';

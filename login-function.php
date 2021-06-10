@@ -43,7 +43,7 @@ if(isset($_POST['registration'])) {
     $query = "INSERT INTO users (username, mail, password, city, birth_date) VALUES('$username','$mail', '$password','$city','$birth_date')";
     mysqli_query($conn, $query);
     $_SESSION['username'] = $username;
-    $_SESSION['success'] = "Du er nu logget ind";
+    $_SESSION['success'] = "Du er nu logget ind ";
     header('location: frontpage.php');
   }
 }

@@ -53,7 +53,7 @@ $user_auction = mysqli_query($conn, $users);
           } ?>
         <p>
         </p>
-        <div class="titles">Bud vundet: <br></div>
+        <div class="titles">Auktioner vundet: <br></div>
         <?php
         if($bids_won) {
           while($row=mysqli_fetch_assoc($win_history)){
